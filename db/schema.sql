@@ -2,7 +2,7 @@ CREATE DATABASE burger_db;
 
 USE burger_db;
 
-CREATE TABLE
+CREATE TABLE burgers
 (
     id INTEGER NOT NULL
     AUTO_INCREMENT,
