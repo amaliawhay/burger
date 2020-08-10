@@ -1,2 +1,32 @@
-<!--Setup to have the template Handlebars can render to-->
-<!--Create button that will submit user input to database-->
+<h1>Burgers</h1>
+
+<h2>Devoured Burgers</h2>
+
+<ul>
+    {{#each burger}}
+    {{#unless devoured}}
+    {{> burgers/burger-block devoured=true}}
+    {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>Burgers that have not been devoured</h2>
+
+<ul>
+    {{#each burger}}
+    {{#if devoured}}
+    {{> burgers/burger-block devoured=false}}
+    {{/if}}
+    {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+    <div class="form-group">
+        <label for="ca">burger Name:</label>
+        <input type="text" id="ca" name="name">
+    </div>
+
+    <button type="submit">Add Burger</button>
+</form>
