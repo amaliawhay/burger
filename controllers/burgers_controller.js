@@ -19,7 +19,7 @@ router.get("/", function (req, res) {
 
 router.post("/api/burger", function (req, res) {
   burger.create(
-    ["name", "devoured"],
+    ["burger_name", "devoured"],
     [req.body.name, req.body.devoured],
     function (result) {
       // Send back the ID of the new quote
@@ -35,7 +35,7 @@ router.put("/api/burger/:id", function (req, res) {
 
   burger.update(
     {
-      sleepy: req.body.devoured,
+      devoured: req.body.devoured,
     },
     condition,
     function (result) {
