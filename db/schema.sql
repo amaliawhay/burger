@@ -1,8 +1,5 @@
 
-
 CREATE DATABASE burger_db;
-
-
 
 USE burger_db;
 
@@ -14,6 +11,7 @@ CREATE TABLE burgers
     burger_name VARCHAR
     (255) NOT NULL,
     devoured BOOLEAN default 0,
+    createdAt TIMESTAMP NOT NULL,
     PRIMARY KEY
     (id)
 );
